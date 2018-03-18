@@ -8,6 +8,11 @@ output "ids" {
     value       = ["${openstack_compute_instance_v2.instance.*.id}"]
 }
 
+output "name" {
+    description = "list of IDs of the created servers"
+    value       = ["${openstack_compute_instance_v2.instance.*.name}"]
+}
+
 output "count" {
     description = "number of servers created"
     value       = "${var.ecs_count}"
